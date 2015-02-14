@@ -30,4 +30,20 @@ class UnicornTest < Minitest::Test
     assert_equal "**;* I don't like you very much. **;*", unicorn.say("I don't like you very much.")
   end
 
+  def test_unicorn_can_fly
+    unicorn = Unicorn.new("Johnny")
+    assert_equal true, unicorn.fly
+  end
+
+  def test_unicorn_can_eat_cotton_candy
+    unicorn = Unicorn.new("Johnny")
+    assert_equal "**;* yummmm cotton candy **;*", unicorn.eat
+  end
+
+  def test_unicorn_cannot_fly_while_eating
+    unicorn = Unicorn.new("Johnny")
+    unicorn.eat
+    assert_equal false, unicorn.fly
+  end
+
 end
