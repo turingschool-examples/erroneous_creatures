@@ -1,12 +1,13 @@
 class Vampire
 
   attr_reader :name
-  attr_accessor :pet
+  attr_accessor :pet, :cape_color
 
-  def initialize (name, pet="bat", thirstiness=true)
+  def initialize (name, cape_color, pet="bat", thirstiness=true)
     @name = name
     @pet = pet
     @thirstiness = thirstiness
+    @cape_color = cape_color
   end
 
   def thirsty?
@@ -15,6 +16,14 @@ class Vampire
 
   def drink
     @thirstiness = false
+  end
+
+  def sleep
+    true
+  end
+
+  def wake
+    @thirstiness = true
   end
 
 
