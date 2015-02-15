@@ -52,4 +52,26 @@ class HobbitTest < Minitest::Test
     hobbit.celebrate_birthday
     assert hobbit.adult?
   end
+
+  def test_can_play_games
+    hobbit = Hobbit.new('Otho')
+    assert hobbit.respond_to?(:play)
+  end
+
+  def test_can_only_play_games_if_a_child
+    hobbit = Hobbit.new('Otho')
+    32.times do
+      hobbit.celebrate_birthday
+    end
+    assert_equal true, hobbit.play
+  end
+
+  def can_get_tired_if_play_3times
+    hobbit = Hobbit.new('Otho')
+    3.times do
+      hobbit.play
+    end
+    assert_equal true, hobbit.tired?
+  end
+  
 end

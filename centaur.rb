@@ -1,45 +1,33 @@
 class Centaur
 
-  attr_reader :name, :breed                                 # => nil
-  attr_accessor :crankiness, :standing, :laying, :sleeping  # => nil
+  attr_reader :name, :breed
+  attr_accessor :crankiness, :standing, :laying, :sleeping
 
   def initialize(name, breed, standing=true, laying=false, sleeping=false)
-    @name = name               # => "jack"
-    @breed = breed             # => "spotted"
-    @crankiness = 0            # => 0
-    @standing = standing           # => true
-    @laying = laying            # => false
-    @sleeping = sleeping          # => false
+    @name = name
+    @breed = breed
+    @crankiness = 0
+    @standing = standing
+    @laying = laying
+    @sleeping = sleeping
   end
 
   def shoot
     @crankiness += 1
-    if @laying  = true
-      "NO!"
-    elsif @crankiness < 3
-      "Twang!!!"
-    else @crankiness >= 3
+    if @crankiness < 3
+       "Twang!!!"
+     else
       "NO!"
     end
   end
 
   def run
-    @crankiness += 1
-    if @laying  = true
-      "NO!"
-    elsif @crankiness < 3
-      "Clop clop clop clop!!!"
-    else @crankiness >= 3
-      "NO!"
-    end
+   @crankiness += 1
+   @crankiness < 3 ? "Clop clop clop clop!!!" : "NO!"
   end
 
   def cranky?
-    if @crankiness < 3  # => true
-      false             # => false
-    else
-      true
-    end                 # => false
+   @crankiness < 3 ? false : true
   end
 
   def standing?
@@ -47,16 +35,13 @@ class Centaur
   end
 
   def sleep
-      if @standing = true    # => true, true
-        "NO!"                # => "NO!", "NO!"
-      else @sleeping = true
-        @crankiness = 0
-      end                    # => "NO!", "NO!"
+      @standing ? "NO!" : @sleeping = true && @crankiness = 0
   end
 
   def lay_down
-    @standing = false  # => false
-    @laying = true     # => true
+    @crankiness = 3
+    @standing = false
+    @laying = true
   end
 
   def laying?
@@ -69,9 +54,9 @@ class Centaur
 
 end
 
-centaur = Centaur.new("jack", "spotted")  # => #<Centaur:0x007f9f84052898 @name="jack", @breed="spotted", @crankiness=0, @standing=true, @laying=false, @sleeping=false>
+centaur = Centaur.new("jack", "spotted")
 
-centaur.sleep     # => "NO!"
-centaur.lay_down  # => true
-centaur.sleep     # => "NO!"
-centaur.cranky?   # => false
+centaur.sleep
+centaur.lay_down
+centaur.sleep
+centaur.cranky?

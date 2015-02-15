@@ -24,6 +24,12 @@ class PirateTest < Minitest::Test
     assert_equal "Cook", pirate.job
   end
 
+  def test_it_has_an_eye_patch
+    pirate = Pirate.new("Jack", "Cook")
+    assert_equal true, pirate.patch
+  end
+
+
   def test_isnt_cursed_by_default
     pirate = Pirate.new("Jack")
     refute pirate.cursed?
@@ -39,4 +45,10 @@ class PirateTest < Minitest::Test
     pirate.commit_heinous_act
     assert pirate.cursed?
   end
+
+  def test_it_speaks_with_an_arrrr
+    pirate = Pirate.new("Jack")
+    assert_equal "arrrr well I'll be", pirate.say("well I'll be")
+  end
+  
 end

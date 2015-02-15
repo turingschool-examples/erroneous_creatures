@@ -49,4 +49,30 @@ class DragonTest < Minitest::Test
     dragon.eat
     refute dragon.hungry?
   end
+
+  def test_dragon_can_breath_fire
+    dragon = Dragon.new("Canth", :brown, "F'nor")
+    dragon.eat
+    dragon.eat
+    dragon.eat
+    assert_equal false, dragon.hungry?
+    assert_equal true, dragon.breathe_fire
+  end
+
+  def test_dragon_is_hungry_after_breathing_fire
+    dragon = Dragon.new("Canth", :brown, "F'nor")
+    dragon.eat
+    dragon.eat
+    dragon.eat
+    dragon.breathe_fire
+    assert dragon.hungry?
+  end
+
+  def test_it_can_not_breathe_fire_when_hungry
+    dragon = Dragon.new("Canth", :brown, "F'nor")
+    assert dragon.hungry?
+    assert_equal false, dragon.breathe_fire
+  end
+
+
 end
