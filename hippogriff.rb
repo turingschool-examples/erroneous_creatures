@@ -11,6 +11,7 @@ class Hippogriff
 
   def fly(rock)
     @moonrocks.push(rock)
+    rock.magicalness = true
   end
 
   def sack
@@ -22,9 +23,15 @@ end
 class Moonstone
 
   attr_reader :color
+  attr_accessor :magicalness
 
   def initialize(color)
     @color = color
+    @magicalness = false
+  end
+
+  def magic?
+    @magicalness
   end
 
 end

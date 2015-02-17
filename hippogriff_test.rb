@@ -39,4 +39,17 @@ class HippogriffTest < Minitest::Test
     assert_equal "sparkly", hippogriff.moonrocks.first.color
   end
 
+  def test_when_created_the_moonrock_is_not_magical
+    rock = Moonstone.new("sparkly")
+    assert_equal false, rock.magic?
+  end
+
+  def test_when_moonrock_is_magical_when_collected
+    hippogriff = Hippogriff.new("jane", :magenta)
+    rock = Moonstone.new("sparkly")
+
+    hippogriff.fly(rock)
+    assert_equal true, rock.magic?
+  end
+
 end
