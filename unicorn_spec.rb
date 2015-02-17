@@ -23,7 +23,6 @@ describe Unicorn do
     unicorn = Unicorn.new("fred")
     unicorn.say("hello").should == "**;* hello **;*"
   end
-
-
+  
 
 end
