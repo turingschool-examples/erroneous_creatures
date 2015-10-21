@@ -6,7 +6,6 @@ class Centaur
   def initialize(name, breed, standing=true, laying=false, sleeping=false)
     @name = name
     @breed = breed
-    @crankiness = 0
     @standing = standing
     @laying = laying
     @sleeping = sleeping
@@ -27,7 +26,7 @@ class Centaur
   end
 
   def cranky?
-   @crankiness < 3 ? false : true
+   @crankiness < 3 ? "false" : "true"
   end
 
   def standing?
@@ -35,7 +34,7 @@ class Centaur
   end
 
   def sleep
-      @standing ? "NO!" : @sleeping = true && @crankiness = 0
+    @standing ? "NO!" : @sleeping = true && @crankiness = 0
   end
 
   def lay_down
@@ -53,10 +52,3 @@ class Centaur
   end
 
 end
-
-centaur = Centaur.new("jack", "spotted")
-
-centaur.sleep
-centaur.lay_down
-centaur.sleep
-centaur.cranky?

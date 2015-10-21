@@ -17,11 +17,20 @@ class Dragon
 
   def eat
    @food_consumed += 1
-   @food_consumed < 3 ? @hungryness = true : @hungryness = false
+   if food_consumed < 3
+     @hungryness = true
+   else
+     @hungryness = false
+   end
   end
 
   def breathe_fire
-    @hungryness ? @fire = false : @fire = true && @hungryness = true
+    if hungry?
+      @fire = false
+    else
+      @fire = true
+      @hungryness = true
+    end
   end
 
 end
