@@ -15,7 +15,7 @@ class Hydra
   end
 
   def dead?
-    @heads = 0 ? @deadness = true : @deadness = false
+    @heads = 0
   end
 
 end

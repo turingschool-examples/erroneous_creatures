@@ -15,7 +15,7 @@ class Hippogriff
   end
 
   def sack
-    @moonrocks
+    @moonrocks.to_h
   end
 
 end
