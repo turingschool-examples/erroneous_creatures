@@ -11,6 +11,8 @@ bugs introduced!
 Your job is to use the test suite, error messages,
 and tools like Pry to fix the mistakes.
 
+### Common Mistakes
+
 Here are some of the kinds of errors you can expect
 to find:
 
@@ -20,7 +22,6 @@ to find:
 * Mixing variable assignment and boolean comparison
 * Mixing of collection and single-object types
 * Probably many more!
-
 
 ### Techniques
 
@@ -37,7 +38,7 @@ change any code
 ### Running the Tests
 
 ```
-mrspec
+mrspec .
 ```
 
 __or__
