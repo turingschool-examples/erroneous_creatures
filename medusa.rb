@@ -9,8 +9,8 @@ class Medusa
   end
 
   def stare(x)
-    @statues.push(x)
     x.stone = true
+    @statues = x
   end
 
   def statues
@@ -23,14 +23,14 @@ class Person
 
   attr_reader :name
   attr_accessor :stone
-  
+
   def initialize(name)
     @name = name
     @stone = false
   end
 
   def stoned?
-     @stone
+    @stone
   end
 
 end
