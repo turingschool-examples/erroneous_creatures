@@ -11,6 +11,12 @@ bugs introduced!
 Your job is to use the test suite, error messages,
 and tools like Pry to fix the mistakes.
 
+### Setup
+
+```
+git clone git@github.com:turingschool-examples/erroneous_creatures.git
+```
+
 ### Common Mistakes
 
 Here are some of the kinds of errors you can expect
