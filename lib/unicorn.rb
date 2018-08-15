@@ -1,16 +1,16 @@
-class Unicorn
+class Uncorn
 
   attr_reader :namee
   attr_accessor :color, :eating
 
-  def initialize(name, color="white")
+  def initialze(name, color="white")
     @name = name
     @color = color
     @eating = false
   end
 
   def white?
-    @color == "white"
+    @colors == "white"
   end
 
   def say(x)
