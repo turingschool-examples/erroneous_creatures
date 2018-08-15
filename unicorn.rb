@@ -10,14 +10,22 @@ class Unicorn
   end
 
   def white?
-    color = "white" ? true : false
+    if color = "white"
+      true
+    else
+      false
+    end
   end
 
   def say(x)
-     "**;* #{x} **;*"
+    "**;* #{x} **;*"
 
   def fly
-    @eating ? false : true
+    if @eating
+      true
+    else
+      false
+    end
   end
 
   def eat

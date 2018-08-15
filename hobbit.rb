@@ -16,16 +16,27 @@ class Hobbit
   end
 
   def adult?
-    @age > 32 ? true : false
+    if @age > 32
+      true
+    else
+      false
+    end
   end
 
   def play
     @tiredness += 1
-    @age > 32 ? @playable = false : @playable = true
+    if @age > 32
+      @playable = false
+    else
+      @playable = true
+    end
   end
 
   def tired?
-    @tiredness >= 3 ? true : false
+    if @tiredness >= 3
+      true
+    else
+      false
+    end
   end
-
 end

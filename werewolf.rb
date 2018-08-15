@@ -11,7 +11,11 @@ class Werewolf
   end
 
   def human?
-    @change.odd? ? false : true
+    if @change.odd?
+      false
+    else
+      true
+    end
   end
 
   def change!
@@ -19,7 +23,11 @@ class Werewolf
   end
 
   def werewolf?
-   @change.odd? ? @werewolf = true : @werewolf = false
+    if @change.odd?
+      @werewolf = true
+    else
+      @werewolf = false
+    end
   end
 
 end
