@@ -22,9 +22,9 @@ class Unicorn
 
   def fly
     if @eating
-      true
-    else
       false
+    else
+      true
     end
   end
 
