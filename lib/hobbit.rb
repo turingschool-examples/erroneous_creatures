@@ -7,7 +7,6 @@ class Hobbit
     @name = name
     @disposition = disposition
     @age = 0
-    @playable = true
     @tiredness = 0
   end
 
@@ -16,27 +15,19 @@ class Hobbit
   end
 
   def adult?
-    if @age > 32
-      true
-    else
-      false
-    end
+    @age >= 32
   end
 
   def play
-    @tiredness += 1
-    if @age > 32
-      @playable = false
+    if adult?
+      false
     else
-      @playable = true
+      @tiredness += 1
+      true
     end
   end
 
   def tired?
-    if @tiredness >= 3
-      true
-    else
-      false
-    end
+    @tiredness >= 3
   end
 end
