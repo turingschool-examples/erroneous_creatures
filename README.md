@@ -30,7 +30,6 @@ git clone git@github.com:turingschool-examples/erroneous_creatures.git
 * `werewolf_test.rb`
 * `centaur_test.rb`
 * `hippogriff_test.rb`
-* `hydra.rb`
 
 ### Common Mistakes
 
