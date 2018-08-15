@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'hobbit'
+require './lib/hobbit'
 
 class HobbitTest < Minitest::Test
   def test_it_has_a_name
@@ -73,5 +73,5 @@ class HobbitTest < Minitest::Test
     end
     assert_equal true, hobbit.tired?
   end
-  
+
 end
