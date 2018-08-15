@@ -1,6 +1,10 @@
 class Werewolf
-  attr_reader :name, :location
-  attr_accessor :human, :change, :werewolf
+  attr_reader :name
+              :location
+
+  attr_accessor :human,
+                :change,
+                :werewolf
 
   def initialize(name, location="london")
     @name = name
