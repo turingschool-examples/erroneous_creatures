@@ -17,6 +17,21 @@ and tools like Pry to fix the mistakes.
 git clone git@github.com:turingschool-examples/erroneous_creatures.git
 ```
 
+
+## Suggested Order
+
+* `unicorn_test.rb`
+* `vampire_test.rb`
+* `dragon_test.rb`
+* `hobbit_test.rb`
+* `pirate_test.rb`
+* `wizard_test.rb`
+* `medusa_test.rb`
+* `werewolf_test.rb`
+* `centaur_test.rb`
+* `hippogriff_test.rb`
+* `hydra.rb`
+
 ### Common Mistakes
 
 Here are some of the kinds of errors you can expect
