@@ -58,12 +58,6 @@ change any code
 ### Running the Tests
 
 ```
-mrspec .
-```
-
-__or__
-
-```
 rake
 ```
 
