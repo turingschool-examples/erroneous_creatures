@@ -58,7 +58,7 @@ change any code
 ### Running the Tests
 
 ```
-rake
+rspec
 ```
 
 __or__ running individual tests using `rspec`:
