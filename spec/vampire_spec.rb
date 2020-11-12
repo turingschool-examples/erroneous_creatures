@@ -1,6 +1,6 @@
 require './lib/vampire'
 
-class VampireTest < Minitest::Test
+RSpec.describe Vampire do
   it "has a name" do
     vampire = Vampire.new("Dracula", "red")
 
