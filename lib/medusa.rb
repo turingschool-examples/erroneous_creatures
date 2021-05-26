@@ -10,7 +10,7 @@ class Medusa
 
   def stare(x)
     x.stone = true
-    @statues = x
+    @statues << x
   end
 
   def statues
