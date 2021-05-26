@@ -47,7 +47,7 @@ RSpec.describe Hippogriff do
     expect(rock.magic?).to eq(false)
   end
 
-  it "when moonrock is magical when collected" do
+  it "moonrock is magical when collected" do
     hippogriff = Hippogriff.new("jane", :magenta)
     rock = Moonstone.new("sparkly")
 

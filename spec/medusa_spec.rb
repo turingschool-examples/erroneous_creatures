@@ -22,7 +22,7 @@ RSpec.describe Medusa do
   it "when first created she has no statues" do
     medusa = Medusa.new("Cassiopeia")
 
-    expect(medusa.statues.empty?).to eq([])
+    expect(medusa.statues.empty?).to eq(true)
   end
 
   it "when staring at a person she gains a statue" do
