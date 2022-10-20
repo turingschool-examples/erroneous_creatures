@@ -29,7 +29,7 @@ git clone git@github.com:turingschool-examples/erroneous_creatures.git
 * `medusa_spec.rb`
 * `werewolf_spec.rb`
 * `centaur_spec.rb`
-* `hippogriff_spec.rb`
+* `hydra_spec.rb`
 
 ### Common Mistakes
 

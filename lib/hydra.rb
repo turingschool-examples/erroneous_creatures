@@ -1,27 +1,24 @@
-class Hippogriff
-
+class Hydra
   attr_reader :name, :color
-  attr_accessor :moonrocks
+  attr_accessor :heads
 
   def initialize(name, color)
     @name = name
     @color = color
-    moonrocks = []
+    heads = [Head.new]
   end
 
-  def fly(rock)
-    rock.magicalness = true
-    @moonrocks.push(rock)
+  def regenerate(head)
+    head.magicalness = true
+    @heads.push(head)
   end
 
-  def sack
-    @moonrocks.to_h
+  def head_info
+    @heads.to_h
   end
-
 end
 
-class Moonstone
-
+class Head
   attr_reader :color
   attr_accessor :magicalness
 
@@ -33,5 +30,4 @@ class Moonstone
   def magic?
     @magicalness
   end
-
 end
