@@ -1,6 +1,6 @@
-class Uncorn
+class Unicorn
 
-  attr_reader :namee
+  attr_reader :name
   attr_accessor :color, :eating
 
   def initialze(name, color="white")
@@ -15,6 +15,7 @@ class Uncorn
 
   def say(x)
     "**;* #{x} **;*"
+  end
 
   def fly
     if @eating

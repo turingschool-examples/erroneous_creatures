@@ -1,4 +1,4 @@
-require '.lib/unicorn'
+require './lib/unicorn'
 
 RSpec.describe Unicorn do
   xit "has a name" do
