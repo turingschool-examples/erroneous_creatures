@@ -1,4 +1,5 @@
 require './lib/medusa'
+require 'pry'
 
 RSpec.describe Medusa do
   it "has a name" do
