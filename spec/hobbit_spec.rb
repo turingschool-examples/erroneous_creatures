@@ -1,4 +1,5 @@
 require './lib/hobbit'
+require 'pry'
 
 RSpec.describe Hobbit do
   it "has a name" do
