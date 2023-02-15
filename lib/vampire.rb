@@ -10,7 +10,7 @@ class Vampire
     @cape_color = cape_color
   end
 
-  def thirsty
+  def thirsty?
     @thirstiness
   end
 
