@@ -7,37 +7,37 @@ RSpec.describe Centaur do
     expect(centaur.name).to eq("George")
   end
 
-  xit "has a horse breed" do
+  it "has a horse breed" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur.breed).to eq("Palomino")
   end
 
-  xit "has excellent bow skills" do
+  it "has excellent bow skills" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur.shoot).to eq("Twang!!!")
   end
 
-  xit "makes a horse sound when it runs" do
+  it "makes a horse sound when it runs" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur.run).to eq("Clop clop clop clop!!!")
   end
 
-  xit "starts not cranky" do
+  it "starts not cranky" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur.cranky?).to eq(false)
   end
 
-  xit "starts standing up" do
+  it "starts standing up" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur.standing?).to eq(true)
   end
 
-  xit "gets cranky after running or shooting a bow 3 times" do
+  it "gets cranky after running or shooting a bow 3 times" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur.cranky?).to eq(false)
@@ -49,7 +49,7 @@ RSpec.describe Centaur do
     expect(centaur.cranky?).to eq(true)
   end
 
-  xit "will not shoot a bow when cranky" do
+  it "will not shoot a bow when cranky" do
     centaur = Centaur.new("George","Palomino")
 
     3.times { centaur.shoot }
@@ -57,7 +57,7 @@ RSpec.describe Centaur do
     expect(centaur.shoot).to eq("NO!")
   end
 
-  xit "will not run when cranky" do
+  it "will not run when cranky" do
     centaur = Centaur.new("George","Palomino")
 
     3.times { centaur.shoot }
@@ -65,19 +65,19 @@ RSpec.describe Centaur do
     expect(centaur.shoot).to eq("NO!")
   end
 
-  xit "will not sleep when standing" do
+  it "will not sleep when standing" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur.sleep).to eq("NO!")
   end
 
-  xit "can lay down" do
+  it "can lay down" do
     centaur = Centaur.new("George","Palomino")
 
     expect(centaur).to respond_to(:lay_down)
   end
 
-  xit "is not standing after laying down" do
+  it "is not standing after laying down" do
     centaur = Centaur.new("George","Palomino")
 
     centaur.lay_down
@@ -86,7 +86,7 @@ RSpec.describe Centaur do
     expect(centaur.laying?).to eq(true)
   end
 
-  xit "can sleep when laying down" do
+  it "can sleep when laying down" do
     centaur = Centaur.new("George","Palomino")
 
     centaur.lay_down
@@ -94,7 +94,7 @@ RSpec.describe Centaur do
     expect(centaur.sleep).to eq("NO!")
   end
 
-  xit "cannot shoot a bow when laying down" do
+  it "cannot shoot a bow when laying down" do
     centaur = Centaur.new("George","Palomino")
 
     centaur.lay_down
@@ -102,7 +102,7 @@ RSpec.describe Centaur do
     expect(centaur.shoot).to eq("NO!")
   end
 
-  xit "cannot run when laying down" do
+  it "cannot run when laying down" do
     centaur = Centaur.new("George","Palomino")
 
     centaur.lay_down
@@ -110,7 +110,7 @@ RSpec.describe Centaur do
     expect(centaur.run).to eq("NO!")
   end
 
-  xit "can stand up" do
+  it "can stand up" do
     centaur = Centaur.new("George","Palomino")
 
     centaur.lay_down
@@ -119,7 +119,7 @@ RSpec.describe Centaur do
     expect(centaur.standing?).to eq(true)
   end
 
-  xit "is no longer cranky after sleeping" do
+  it "is no longer cranky after sleeping" do
     centaur = Centaur.new("George","Palomino")
 
     centaur.shoot
